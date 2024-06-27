@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS в HTML</title>
+</head>
+
+<body>
+
+  <script>
+
+function createAccumulator() {
+    // Переменная для накопления суммы
+    let total = 0;
+
+    // Возвращаемая функция
+    return function(num) {
+        total += num;
+        return total;
+    };
+}
+
+// Создаем экземпляр функции
+const sum = createAccumulator();
+
+console.log(sum(4)); // 4
+console.log(sum(6)); // 10
+console.log(sum(10)); // 20
+console.log(sum(7)); // 27
+
+
+  </script>
+
+</body>
+
+</html>
